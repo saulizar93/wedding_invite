@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Wedding Invitation App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Interactive wedding invitation web application built with React and deployed using GitHub Pages.
 
-## Available Scripts
+---
+
+## Development
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000).  
+The page will reload when you make edits.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder, optimizing and minifying the assets.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to Deploy to GitHub Pages
 
-### `npm run eject`
+This project is configured to deploy to GitHub Pages using the `gh-pages` package.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Quick Deploy Command
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Whenever you make updates (e.g. to `master`) and want them live on GitHub Pages, run:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run deploy
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### What `npm run deploy` does:
 
-## Learn More
+1. **`predeploy`**: Automatically runs `npm run build` to compile the latest source code into static production assets in the `build/` folder.
+2. **`deploy`**: Runs `gh-pages -d build`, which commits the static files in `build/` to the remote `gh-pages` branch and pushes it to GitHub.
+3. GitHub Pages automatically detects the new commit on `gh-pages` and updates the live site (usually takes 1–2 minutes).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to Change the Deployment URL or Repository
 
-### Code Splitting
+GitHub Pages URL structure depends on whether the repository is a **User Site** or a **Project Site**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **User Site (`https://<username>.github.io/`)**:
+  - Occurs when the GitHub repository is named exactly `<username>.github.io` (e.g., `saulizar93.github.io`).
+  - GitHub hosts it directly at the root domain.
+- **Project Site (`https://<username>.github.io/<repo-name>/`)**:
+  - Occurs when the repository has any other name (e.g., `weddinginvite`, `bible-app`).
+  - GitHub hosts it under a sub-path matching the repository name.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Step-by-Step: Changing the Site URL (e.g. to `/weddinginvite`)
 
-### Making a Progressive Web App
+#### 1. Rename the Repository on GitHub
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Open your repository on GitHub.
+2. Navigate to **Settings** > **General**.
+3. Under **Repository name**, enter the new name (e.g., `weddinginvite`) and click **Rename**.
 
-### Advanced Configuration
+#### 2. Update Your Local Git Remote URL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Point your local repository to the new remote URL:
 
-### Deployment
+```bash
+git remote set-url origin https://github.com/<username>/<new-repo-name>.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+_(Example: `git remote set-url origin https://github.com/saulizar93/wedding_invite.git`)_
 
-### `npm run build` fails to minify
+Verify with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git remote -v
+```
+
+#### 3. Update `homepage` in `package.json`
+
+Open `package.json` and update the `"homepage"` field to match the new URL:
+
+```json
+"homepage": "https://<username>.github.io/<new-repo-name>"
+```
+
+_(Example: `"homepage": "https://saulizar93.github.io/wedding_invite"`)_
+
+> **Note**: Create React App uses `homepage` during `npm run build` to ensure all asset paths (scripts, CSS, images) resolve relative to `/wedding_invite/` rather than root `/`.
+
+#### 4. Commit and Redeploy
+
+Commit your changes and trigger a new deployment:
+
+```bash
+git add package.json
+git commit -m "Update homepage URL for GitHub Pages"
+git push origin master
+npm run deploy
+```
+
+Once deployment completes, GitHub Pages will publish the site at the new URL!
