@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.2b70dfc4.css",
-    "main.js": "/static/js/main.22422cd0.js",
-    "static/js/453.de9d5605.chunk.js": "/static/js/453.de9d5605.chunk.js",
-    "static/media/ThoseEyes.mp3": "/static/media/ThoseEyes.73ed324ec166f4631a7c.mp3",
-    "static/media/GreatVibes-Regular.ttf": "/static/media/GreatVibes-Regular.f51f1a4f2cd0c9611249.ttf",
-    "static/media/S&L-103.jpg": "/static/media/S&L-103.d6c0725fc2345a86dffb.jpg",
-    "static/media/S&L-106.jpg": "/static/media/S&L-106.7f6abfab598c603f4e3c.jpg",
-    "static/media/Anton-Regular.ttf": "/static/media/Anton-Regular.170b842f9a8cd6150a0d.ttf",
-    "static/media/S&L-56.jpg": "/static/media/S&L-56.7f74994dc8463a755743.jpg",
-    "static/media/DancingScript-VariableFont_wght.ttf": "/static/media/DancingScript-VariableFont_wght.d02a1ee17643667e9808.ttf",
-    "static/media/hoja_fondo2.jpg": "/static/media/hoja_fondo2.ba1ebedacb1e2ca093b8.jpg",
-    "static/media/S&L-46.jpg": "/static/media/S&L-46.2d19ffebcd15b39cb2b1.jpg",
-    "static/media/FREESCPT.TTF": "/static/media/FREESCPT.66481f539db7e51d22d9.TTF",
-    "static/media/CedarvilleCursive-Regular.ttf": "/static/media/CedarvilleCursive-Regular.a669593f51bb81ad0cc1.ttf",
-    "static/media/KUNSTLER.TTF": "/static/media/KUNSTLER.a16836b3ecd6fd5f65cc.TTF",
-    "static/media/hojas_fondo.jpg": "/static/media/hojas_fondo.f9d53a59c229897afcd1.jpg",
-    "index.html": "/index.html",
-    "main.2b70dfc4.css.map": "/static/css/main.2b70dfc4.css.map",
-    "main.22422cd0.js.map": "/static/js/main.22422cd0.js.map",
-    "453.de9d5605.chunk.js.map": "/static/js/453.de9d5605.chunk.js.map"
+    "main.css": "/wedding_invite/static/css/main.5c82d94e.css",
+    "main.js": "/wedding_invite/static/js/main.80cdfc72.js",
+    "static/js/453.de9d5605.chunk.js": "/wedding_invite/static/js/453.de9d5605.chunk.js",
+    "static/media/ThoseEyes.mp3": "/wedding_invite/static/media/ThoseEyes.73ed324ec166f4631a7c.mp3",
+    "static/media/GreatVibes-Regular.ttf": "/wedding_invite/static/media/GreatVibes-Regular.f51f1a4f2cd0c9611249.ttf",
+    "static/media/S&L-103.jpg": "/wedding_invite/static/media/S&L-103.d6c0725fc2345a86dffb.jpg",
+    "static/media/S&L-106.jpg": "/wedding_invite/static/media/S&L-106.7f6abfab598c603f4e3c.jpg",
+    "static/media/Anton-Regular.ttf": "/wedding_invite/static/media/Anton-Regular.170b842f9a8cd6150a0d.ttf",
+    "static/media/S&L-56.jpg": "/wedding_invite/static/media/S&L-56.7f74994dc8463a755743.jpg",
+    "static/media/DancingScript-VariableFont_wght.ttf": "/wedding_invite/static/media/DancingScript-VariableFont_wght.d02a1ee17643667e9808.ttf",
+    "static/media/hoja_fondo2.jpg": "/wedding_invite/static/media/hoja_fondo2.ba1ebedacb1e2ca093b8.jpg",
+    "static/media/S&L-46.jpg": "/wedding_invite/static/media/S&L-46.2d19ffebcd15b39cb2b1.jpg",
+    "static/media/FREESCPT.TTF": "/wedding_invite/static/media/FREESCPT.66481f539db7e51d22d9.TTF",
+    "static/media/CedarvilleCursive-Regular.ttf": "/wedding_invite/static/media/CedarvilleCursive-Regular.a669593f51bb81ad0cc1.ttf",
+    "static/media/KUNSTLER.TTF": "/wedding_invite/static/media/KUNSTLER.a16836b3ecd6fd5f65cc.TTF",
+    "static/media/hojas_fondo.jpg": "/wedding_invite/static/media/hojas_fondo.f9d53a59c229897afcd1.jpg",
+    "index.html": "/wedding_invite/index.html",
+    "main.5c82d94e.css.map": "/wedding_invite/static/css/main.5c82d94e.css.map",
+    "main.80cdfc72.js.map": "/wedding_invite/static/js/main.80cdfc72.js.map",
+    "453.de9d5605.chunk.js.map": "/wedding_invite/static/js/453.de9d5605.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b70dfc4.css",
-    "static/js/main.22422cd0.js"
+    "static/css/main.5c82d94e.css",
+    "static/js/main.80cdfc72.js"
   ]
 }
