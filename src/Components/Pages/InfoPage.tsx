@@ -1,18 +1,18 @@
-import './InfoPage.css';
-import React, { useEffect, useState } from 'react';
+import "./InfoPage.css";
+import React, { useEffect, useState } from "react";
 
 const InfoPage = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
-    minutes: 0
+    minutes: 0,
   });
 
   useEffect(() => {
-    const targetDate:any = new Date('2025-08-09T00:00:00');
+    const targetDate: any = new Date("2025-08-09T00:00:00");
 
     const updateCountdown = () => {
-      const now:any = new Date();
+      const now: any = new Date();
       const diff = targetDate - now;
 
       const totalMinutes = Math.floor(diff / (1000 * 60));
@@ -42,13 +42,13 @@ const InfoPage = () => {
             <div className="invite-number">09</div>
             <div className="invite-month-year">AGOSTO</div>
           </div>
-          
+
           <div className="invite-details">
             <div className="invite-section">
               <div className="section-title">Dirección:</div>
-              <div>Guanábana 59</div>
-              <div>Las Huertas 4ta secc.</div>
-              <div>C.P. 22117</div>
+              <div>XXXXXXXXX XX</div>
+              <div>XXX XXXXXXX XXX XXXX</div>
+              <div>XX XXXXX</div>
             </div>
 
             <div className="invite-section">
@@ -57,7 +57,7 @@ const InfoPage = () => {
               <div>Cena: 8:30PM</div>
             </div>
           </div>
-          
+
           <div className="countdown-title">Solo falta:</div>
           <div className="countdown-box">
             <div className="countdown-item">
@@ -79,7 +79,9 @@ const InfoPage = () => {
               <div className="countdown-label">MINUTOS</div>
             </div>
           </div>
-          <p className="farewell">Su presencia es el mejor regalo que podemos recibir.</p>
+          <p className="farewell">
+            Su presencia es el mejor regalo que podemos recibir.
+          </p>
           <p className="closing-text">¡Te esperamos!</p>
           {/* <p className="vestimenta-message">Vestimenta formal</p> */}
         </div>
